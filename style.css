@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&family=M+PLUS+Rounded+1c&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(64, 226, 226, 0.07);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.heading{
+    font-family: "Gwendolyn", cursive;
+    font-weight: 800;
+    font-style: normal;
+    color: #4caf50;;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+.heading span {
+    color: brown;
+    transition: color 0.3s;
+}
+.heading:hover,
+.heading:active {
+    color: rgb(16, 219, 16);
+}
+.heading:hover span,
+.heading:active span {
+    color: rgb(227, 40, 40);
+}
+
+.box {
+    background-color: #f7f4ea;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+.top {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-style: normal;
+    display: flex;
+    justify-content: space-between;
+}
+.top button{
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 2rem;
+    outline: none;
+    border: 1px solid black;
+    cursor: pointer;
+    padding-bottom: 34px;
+}
+.hero {
+    margin: 20px 0;
+    text-align: center;
+}
+.hero p {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+.fill{
+    width: 90%;
+    background-color: rgba(171, 238, 238, 0.7);
+    border-radius: 25px;
+    margin: 10px auto;
+    padding: 3px;
+    position: relative;
+}
+.bar { 
+    width: 0%;
+    height: 30px;
+    background-color: #4caf50;
+    border-radius: 20px;
+    transition: width 0.4s ease-in-out;
+}
+.text {
+    position: absolute;
+    top: 10px; left: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+}
+.task{
+    width: 95%;
+    height: 50px;
+    margin: 10px auto;
+    border-radius: 10px;
+    padding: 0 20px;
+    align-items: center;
+    display: flex;
+    background-color: #fff;
+    justify-content: space-between;
+    box-shadow: inset 1px 0px 4px 1px #00000066;
+}
+.task:hover, .task:active{
+    border: 1px solid #333;
+}
+.task .checked{
+    width: 25px;
+    height: 25px;
+    border-radius: 13px;
+    border: 1px solid #333;
+    cursor: pointer;
+}
+.icon{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: none;
+}
+.task input{
+    width: 90%;
+    height: 30px;
+    font-size: 1.2rem;
+    padding: 2px 5px;
+    border: none;
+    outline: none;
+    font-style: italic;
+}
+.task input::placeholder{
+    color: #00000066;
+}
+.complete img{
+    display: block;
+}
+.complete input{
+    color: #4caf50;
+    text-decoration-line: line-through;
+}
+tip{
+    display: block;
+    margin: 20px 0;
+    font-style: italic;
+    font-weight: 500;
+    text-align: center;    
+    transition: all 0.2s;
+}
+
+end{
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    transition: all 0.2s;
+}
+tip:hover,
+tip:active,end:hover,
+end:active  {
+    color: #ff6347;
+    transform: scale(1.1);
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .heading {
+        font-size: 3rem;
+    }
+    .box {
+        padding: 15px;
+    }
+    .top {
+        font-size: 1.5rem;
+    }
+    .top button{
+        width: 20px;
+        height: 20px;
+        font-size: 25px;
+        padding-bottom: 28px;
+    }
+    .bar{
+        height: 20px;
+    }
+    .text{
+        top: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading {
+        font-size: 2.5rem;
+    }
+    .box {
+        padding: 10px;
+    }
+    .top {
+        font-size: 1.2rem;
+    }
+    .bar{
+        height: 15px;
+    }
+    .text{
+        top: 5px;
+    }
+    .task{
+        height: 30px;
+    }
+    .task input{
+        font-size: 1rem;
+        height: 20px;
+    }
+    .task .checked{
+        width: 15px;
+        height: 15px;        
+    }
+}
